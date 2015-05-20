@@ -31,7 +31,7 @@ var Particle = {
 		
 		//Set the color of the particles. Follow same style you can add or remove colors
 		gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius);
-		gradient.addColorStop(0, 'blue');
+		gradient.addColorStop(0, 'red');
 		gradient.addColorStop(0.8, '#444');
 		gradient.addColorStop(1, this.color);
 		
@@ -58,21 +58,22 @@ function createParticle() {
 	particle.x_speed = rnd.randomInt(-3, 3);
 	particle.y_speed = rnd.randomInt(-3, 3);
 	
-	particle.color = "green";
+	particle.color = "#111";
 	
 
-	particles.push(particle);
+	particles.push(particle);	
 
 	particle.draw();
 }
+
 
 createParticle();
 
 /*
 If you want to create multiple particles with an interval, just use the code below
-
+*/
 //Create one particle per second
 setInterval(function() {
 	createParticle();
-}, 1000);
-*/
+}, 1);
+
