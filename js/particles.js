@@ -8,20 +8,12 @@ var canvas = document.getElementById('canvas'),
 canvas.width = window_width;
 canvas.height = window_height;
 
-var rnd = {
-	randomInt: function(min, max) {
-		return Math.random() * (max - min + 1) + min;
-	}
-};
-
 // Particles array
 var particles = [];
 
 var Particle = {
 	x: window_width,
 	y: window_height,
-	x_speed: 10,
-	y_speed: 10,
 	radius: 10,
 
 	draw: function() {
@@ -53,10 +45,6 @@ function createParticle() {
 
 	particle.x = Math.random()*window_width;
 	particle.y = Math.random()*window_height;
-	
-
-	particle.x_speed = rnd.randomInt(-3, 3);
-	particle.y_speed = rnd.randomInt(-3, 3);
 	
 	particle.color = "#111";
 	
