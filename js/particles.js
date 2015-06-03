@@ -59,10 +59,9 @@ createParticle();
 
 /*
 If you want to create multiple particles with an interval, just use the code below
-
+*/
 //Create one particle per second
 setInterval(function() {
 	createParticle();
-}, 1);
+}, 0.000001);
 
-*/
