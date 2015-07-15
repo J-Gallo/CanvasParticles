@@ -14,11 +14,24 @@
 	var cascadas = [];
 
 	var particle_count = 90;
+	var cascada_count = 200;
+
+   
+
 	for(var i = 0; i < particle_count; i++)
 	{
 		particles.push(new particle());
-		cascadas.push(new cascada());
+		
 	}
+
+	for(var i = 0; i < cascada_count; i++)
+	{
+		cascadas.push(new cascada());
+		
+	}
+
+
+
 	
 	function particle()
 	{
@@ -40,13 +53,13 @@
 	function cascada()
 	{
 
-		this.speed = {x: -2.5 + Math.random() * 5, y: + 15 + Math.random() * 10};
+		this.speed = {x: -2.5 + Math.random() * 5, y: + 10 + Math.random() * 10};
 		
-		this.location = {x: fullWidth/2, y: fullHeight/3};
+		this.location = {x: fullWidth/2 + Math.random() * 200, y: fullHeight/3};
 
 		this.radius = 20+Math.random()*20;
 
-		this.life = 20+Math.random()*10;
+		this.life = 20+Math.random()*15;
 		this.remaining_life = this.life;
 
 		this.r = 0;
@@ -56,6 +69,7 @@
 	
 	function draw()
 	{
+		
 		ctx.globalCompositeOperation = "source-over";
 		ctx.fillStyle = "black";
 		ctx.fillRect(0, 0, fullWidth/2.5, fullHeight);
@@ -92,7 +106,7 @@
 		ctx.fillStyle = "black";
 		ctx.fillRect(fullWidth/2.5, 0, fullWidth/2.5, fullHeight);
 		ctx.globalCompositeOperation = "lighter";
-		
+
 		for(var i = 0; i < cascadas.length; i++)
 		{
 			var c = cascadas[i];
