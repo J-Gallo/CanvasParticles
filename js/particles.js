@@ -63,6 +63,7 @@ function drawParticles(){
 	function draw()
 	{
 		ctx.globalCompositeOperation = "source-over";
+		ctx.globalCompositeOperation = "lighter";
 		ctx.clearRect(0, 0, canvas.width/2.5, canvas.height);
 
 		for(var i = 0; i < particles.length; i++)
