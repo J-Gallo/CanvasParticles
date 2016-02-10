@@ -99,7 +99,7 @@ function drawParticles(){
 	function drawBlueParticle()
 	{
 		ctx.globalCompositeOperation = "source-over";
-		ctx.fillStyle = "transparent";
+		ctx.fillStyle = "black";
 		ctx.fillRect(canvas.width/2.5, 0, canvas.width/2.5, canvas.height);
 		ctx.globalCompositeOperation = "lighter";
 		
@@ -129,5 +129,5 @@ function drawParticles(){
 		}
 	}
 	setInterval(draw, 33);
-	setInterval(drawBlueParticle, 33);
+	//setInterval(drawBlueParticle, 33);
 }
