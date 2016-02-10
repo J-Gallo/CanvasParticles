@@ -99,7 +99,7 @@ function drawParticles(){
 	function drawBlueParticle()
 	{
 		ctx.globalCompositeOperation = "source-over";
-		ctx.fillStyle = "#212120";
+		ctx.fillStyle = "transparent";
 		ctx.fillRect(canvas.width/2.5, 0, canvas.width/2.5, canvas.height);
 		ctx.globalCompositeOperation = "lighter";
 		
